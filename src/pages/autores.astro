@@ -9,8 +9,8 @@ import coverSVG from '../assets/svg/undraw/undraw_windows.svg'
 import socialImage from '../assets/undraw/undraw_windows.png'
 
 const frontmatter: Frontmatter = {
-  title: 'Authors',
-  description: 'Contributors to this website',
+  title: 'Autores',
+  description: 'Colaboradores de este sitio web',
   coverSVG: coverSVG,
   socialImage: socialImage,
   publishDate: SiteMetadata.buildTime
@@ -43,7 +43,7 @@ const authors = await getCollection('author')
                   />
                 </div>
                 <h3 class='inline-block rounded bg-sky-600 px-3 py-1 text-xs font-medium uppercase tracking-tight text-white hover:bg-amber-600'>
-                  <a href={`${import.meta.env.BASE_URL}author/${author.slug}/`}>
+                  <a href={`${import.meta.env.BASE_URL}autor/${author.slug}/`}>
                     <span class='absolute inset-0' />
                     {author.data.title}
                   </a>

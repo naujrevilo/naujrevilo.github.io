@@ -39,11 +39,11 @@ export { default as DefaultSVG } from './assets/svg/undraw/undraw_my_feed.svg'
 export { default as DefaultImage } from './assets/undraw/undraw_my_feed.png'
 
 export const NavigationLinks = [
-  { name: 'Home', href: '' },
-  { name: 'About', href: 'about' },
-  { name: 'Contact', href: 'contact' },
+  { name: 'Inicio', href: '' },
   { name: 'Blog', href: 'blog' },
-  { name: 'Docs', href: 'doc/introduction' }
+  { name: 'Docs', href: 'doc/introduction' },
+  { name: 'Acerca', href: 'acerca' },
+  { name: 'Contacto', href: 'contacto' },
 ]
 
 export const PAGE_SIZE = 6

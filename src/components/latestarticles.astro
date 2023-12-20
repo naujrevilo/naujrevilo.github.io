@@ -19,25 +19,25 @@ const otherPosts = posts.slice(1, 5)
     <div class='mx-auto max-w-2xl py-8 sm:py-12 lg:max-w-none lg:py-16'>
       <div class='flex flex-row items-center'>
         <h2 class='text-2xl font-extrabold text-sky-800 dark:text-sky-200 md:text-4xl'>
-          Our Latest Articles
+          Nuestros últimos artículos
         </h2>
         <a
           href={import.meta.env.BASE_URL + 'blog'}
           class='ml-4 mt-2 inline-block rounded-md bg-sky-600 px-2 py-2 text-base font-bold text-white hover:bg-amber-600 dark:bg-sky-300 dark:text-black dark:hover:bg-amber-300 md:px-6 md:py-3 md:text-lg'
         >
-          All Articles
+          Todos los artículos
         </a>
         <a
-          href={import.meta.env.BASE_URL + 'categories'}
+          href={import.meta.env.BASE_URL + 'categorias'}
           class='ml-4 mt-2 inline-block rounded-md bg-sky-100 px-2 py-2 text-base font-bold text-sky-800 hover:bg-amber-200 dark:bg-sky-900 dark:text-sky-100 dark:hover:bg-amber-900 md:px-6 md:py-3 md:text-lg'
         >
-          Categories
+          Categorías
         </a>
         <a
-          href={import.meta.env.BASE_URL + 'tags'}
+          href={import.meta.env.BASE_URL + 'etiquetas'}
           class='ml-4 mt-2 inline-block rounded-md bg-sky-100 px-2 py-2 text-base font-bold text-sky-800 hover:bg-amber-200 dark:bg-sky-900 dark:text-sky-100 dark:hover:bg-amber-900 md:px-6 md:py-3 md:text-lg'
         >
-          Tags
+          Etiquetas
         </a>
       </div>
       <div class='mt-6 space-y-12 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0 xl:grid-cols-3'>
@@ -82,7 +82,7 @@ const otherPosts = posts.slice(1, 5)
             href={import.meta.env.BASE_URL + 'blog/' + newestPost.slug}
             class='mt-2 inline-block rounded-md bg-sky-600 px-6 py-3 text-white hover:bg-amber-600 dark:bg-sky-300 dark:text-black dark:hover:bg-amber-300'
           >
-            Read more
+            Leer más
             <span class='sr-only'>{newestPost.data.title}</span>
           </a>
         </div>
