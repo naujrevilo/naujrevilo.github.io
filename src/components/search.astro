@@ -24,7 +24,7 @@ import { Icon } from 'astro-icon'
       '<ul class="relative grid gap-6 bg-white dark:bg-gray-700 dark:text-gray-100 px-5 py-6 sm:gap-8 sm:p-8"></ul>'
     if (term) {
       document.getElementById('lunrsearchtitle').innerHTML =
-        "Search results for '" + term + "'"
+        "Resultados de la búsqueda para '" + term + "'"
       //put results on the screen.
       const results = this.idx.search(term)
       if (results.length > 0) {
@@ -46,7 +46,7 @@ import { Icon } from 'astro-icon'
         }
       } else {
         document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML =
-          'No results found...'
+          'No se encontraron resultados...'
       }
     }
 
@@ -66,7 +66,7 @@ import { Icon } from 'astro-icon'
           name='q'
           maxlength='255'
           value=''
-          placeholder='Search'
+          placeholder='demanda denuncia civil constitución'
           aria-label='Search'
           aria-describedby='lunrbutton'
         />
@@ -145,7 +145,7 @@ import { Icon } from 'astro-icon'
                 class='rounded-md text-sky-300 hover:text-amber-300 focus:outline-none focus:ring-2 focus:ring-white'
                 x-on:click='searchResults = false'
               >
-                <span class='sr-only'>Close panel</span>
+                <span class='sr-only'>Cerrar panel</span>
                 <Icon class='h-6 w-6' pack='heroicons-outline' name='x' />
               </button>
             </div>
@@ -159,7 +159,7 @@ import { Icon } from 'astro-icon'
                   id='lunrsearchtitle'
                   class='modal-title'
                 >
-                  Search results
+                  Resultado(s) de la búsqueda
                 </h2>
               </div>
               <div id='lunrsearchmodal' class='relative mt-6 flex-1 px-4 sm:px-6'>

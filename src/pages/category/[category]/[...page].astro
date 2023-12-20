@@ -21,9 +21,9 @@ const detail = await getEntry('category', category!)
 
 const frontmatter: Frontmatter = {
   title:
-    'Category: ' +
+    'Categoría: ' +
     category +
-    (page.size < page.total ? ' (page ' + page.currentPage + ' of ' + page.lastPage + ')' : ''),
+    (page.size < page.total ? ' (Página ' + page.currentPage + ' de ' + page.lastPage + ')' : ''),
   description: detail!.data.description,
   coverSVG: detail!.data.coverSVG,
   socialImage: detail!.data.socialImage,
