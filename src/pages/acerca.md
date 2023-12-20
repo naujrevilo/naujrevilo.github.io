@@ -1,10 +1,10 @@
 ---
 layout: ../layouts/page.astro
-title: About
-description: Description of Hello Astro Starter
+title: Nosotros
+description: Somos una sociedad fundada por un equipo interdisciplinarios de profesionales especializados en brindar un servicio de consultorías y representaciones corporativas
 publishDate: '2023-06-13T00:00:00.000Z'
-coverSVG: ../assets/svg/undraw/undraw_about_me.svg
-socialImage: ../assets/undraw/undraw_about_me.png
+coverSVG: ../assets/svg/cover-acercade.svg
+socialImage: ../assets/img/social-acerca-de.jpg
 ---
 
 This is multi-purpose Astro starter template based on the following:
