@@ -41,9 +41,13 @@ export { default as DefaultImage } from './assets/undraw/undraw_my_feed.png'
 export const NavigationLinks = [
   { name: 'Inicio', href: '' },
   { name: 'Blog', href: 'blog' },
-  { name: 'Nosotros', href: 'acerca' },
+  { name: 'Docs', href: 'doc/introduction' },
+<<<<<<<<< Temporary merge branch 1
+  { name: 'Acerca', href: 'Acerca' },
+=========
+  { name: 'Acerca', href: 'acerca' },
+>>>>>>>>> Temporary merge branch 2
   { name: 'Contacto', href: 'contacto' },
-  { name: 'Docs', href: 'doc/introduction' }
 ]
 
 export const PAGE_SIZE = 6
