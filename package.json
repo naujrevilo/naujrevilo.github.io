@@ -65,6 +65,7 @@
     "lunr": "^2.3.9",
     "photoswipe": "^5.4.3",
     "photoswipe-dynamic-caption-plugin": "^1.2.7",
+    "sharp": "^0.33.1",
     "swiper": "^11.0.5"
   },
   "packageManager": "pnpm@8.5.1"

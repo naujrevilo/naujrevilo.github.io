@@ -1,0 +1,57 @@
+---
+layout: ../layouts/page.astro
+title: Nosotros
+description: Somos una sociedad fundada por un equipo interdisciplinarios de profesionales especializados en brindar un servicio de consultorías y representaciones corporativas
+publishDate: '2023-06-13T00:00:00.000Z'
+coverSVG: ../assets/svg/cover-acercade.svg
+socialImage: ../assets/img/social-acerca-de.jpg
+---
+
+import { Image } from 'astro:assets';
+import nosotros from '../assets/img/nosotros.png';
+import check from '../assets/img/check.svg';
+
+
+<div class='relative overflow-hidden bg-white dark:bg-gray-900'>
+    <Image src={nosotros}
+    alt="Nosotros"
+    width="300"
+    height="200"
+    decoding="async"
+    loading="lazy"
+    shape-outside= "circle(50%)"
+    align="right"
+    />
+    
+    # ¿Quienes somos?
+    
+    Somos una sociedad fundada por un equipo interdisciplinarios de profesionales especializados en brindar un servicio de consultorías y representaciones corporativas, en esta área tenemos una extensa y variada experiencia que va desde la planeación de estructuras corporativas hasta los acuerdos de accionistas y otros avenir de la naturaleza societaria.
+</div>
+
+## Nuestra misión
+Nuestra misión es aplicar nuestros conocimientos y experiencia en materia jurídica, de lobby y de regulación para que nuestros clientes puedan definir y alcanzar sus objetivos, al tiempo que apoyamos a nuestras comunidades como una cuestión de misión y pasión. Lo hacemos honrando y continuando una tradición establecida de servir a nuestros clientes y comunidades a través del cultivo de relaciones basadas en el respeto, la lealtad y la integridad.
+
+## Nuestra misión
+Nos esforzamos por mantener a la empresa como firma profesional líder en Vietnam. Lo conseguimos prestando a nuestros clientes una amplia gama de servicios profesionales, con soluciones innovadoras y prácticas, normas de calidad y precios competitivos, que contribuyen al éxito de nuestros clientes, e invirtiendo en nuestra gente, formando y desarrollando trayectorias profesionales para nuestros talentos que ayuden a la empresa a anticiparse a los cambios y mirar hacia el futuro, como nuestro nombre indica. Con esto en mente, para 2030 queremos estar entre las cinco mejores firmas legales de la región.
+
+
+<div class='relative overflow-hidden bg-white dark:bg-gray-900'>
+    <Image src={check}
+        alt="Nosotros"
+        width="300"
+        height="200"
+        decoding="async"
+        loading="lazy"
+        shape-outside= "circle(50%)"
+        align="right"
+        format={["avif", "webp"]}
+    />
+    
+    ## ¿Por qué somos su mejor opción?
+  * Por nuestra amplia experiencia en el campo jurídico.
+  * Porque contamos con un talento humano calificado y especializado en estudios jurídicos, contables, tributarios y administrativos.
+  * Aplicamos estrategias con propuestas innovadoras en la búsqueda del incremento y rentabilidad de nuestros clientes.
+  * Nos encargamos de disminuir el riesgo en sus intereses (patrimoniales, laborales, etc.).
+  * Tenemos tarifas cómodas de acuerdo a sus necesidades.
+  * Trabajamos de manera constante en sus asuntos, manteniendo información actualizada de los estados de sus consultas.
+</div>
