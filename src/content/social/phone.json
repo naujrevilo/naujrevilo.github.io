@@ -1,5 +1,6 @@
 {
-  "name": "Phone",
-  "link": "tel:555-5555",
-  "icon": "telephone"
+  "name": "Teléfono",
+  "link": "tel:+573165157917",
+  "icon": "phone-call",
+  "type": "is-tel"
 }

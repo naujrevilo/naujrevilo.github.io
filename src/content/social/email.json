@@ -1,5 +1,6 @@
 {
   "name": "Email",
-  "link": "mailto:info@hellothamcom",
-  "icon": "envelope"
+  "link": "mailto:contacto@martinezfiloz.com",
+  "icon": "mail ",
+  "type": "is-mail"
 }

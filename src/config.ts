@@ -9,26 +9,26 @@ export interface TagType {
 }
 
 export const SiteMetadata = {
-  title: 'Hello Astro',
+  title: 'Martínez Filoz & Asociados',
   description: 'An Astro starter for corporate/marketing/blog websites.',
   author: {
-    name: 'Chris Tham',
-    twitter: '@chris1tham',
-    url: 'https://christham.net',
-    email: 'chris@christham.net',
+    name: 'Richard Martínez',
+    twitter: '@RMFABOGADOS',
+    url: 'https://martinezfiloz.com',
+    email: 'director@martinezfiloz.com',
     summary: 'Outrageous actualiser.'
   },
   org: {
-    name: 'Hello Tham',
-    twitter: '@hellothamcom',
-    url: 'https://hellotham.com',
-    email: 'info@hellotham.com',
+    name: 'Martínez Filoz & Asociados S.A.S.',
+    twitter: '@RMFABOGADOS',
+    url: 'https://martinezfiloz.com',
+    email: 'contacto@martinezfiloz.com',
     summary:
       'Hello Tham is a boutique management consulting firm. We specialise in Business and IT strategies, operating models, strategic roadmaps, enterprise architecture, analytics and business process design.'
   },
-  location: 'Rivendell, Middle Earth',
-  latlng: [-33.86785, 151.20732] as [number, number],
-  repository: 'https://github.com/hellotham/hello-astro',
+  location: 'CALLE CARLOS ESCALLON Dg. 35 # 8-85 PISO 2 OFICINA 201 A, BARRIO CENTRO',
+  latlng: [10.425297279374076, -75.54761700513578] as [number, number],
+  repository: 'https://github.com/naujrevilo/martinezfiloz',
   buildTime: new Date()
 }
 
@@ -48,7 +48,7 @@ export const NavigationLinks = [
 
 export const PAGE_SIZE = 6
 
-export const GITHUB_EDIT_URL = `https://github.com/hellotham/hello-astro`
+export const GITHUB_EDIT_URL = `https://github.com/naujrevilo/martinezfiloz`
 
 export const COMMUNITY_INVITE_URL = `https://astro.build/chat`
 

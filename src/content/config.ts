@@ -60,7 +60,8 @@ const socialCollection = defineCollection({
   schema: z.object({
     name: z.string(),
     link: z.string(),
-    icon: z.string()
+    icon: z.string(),
+    type: z.string()
   })
 })
 

@@ -1,5 +1,6 @@
 {
-  "name": "Twitter",
-  "link": "https://twitter.com/hellothamcom",
-  "icon": "twitter"
+  "name": "X",
+  "link": "https://x.com/RMFABOGADOS",
+  "icon": "brand-twitter",
+  "type": "is-external"
 }
