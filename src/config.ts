@@ -16,7 +16,9 @@ export const SiteMetadata = {
     twitter: '@RMFABOGADOS',
     url: 'https://martinezfiloz.com',
     email: 'director@martinezfiloz.com',
-    summary: 'Outrageous actualiser.'
+    summary: 'Outrageous actualiser.',
+    nuip: "73160051",
+    procard: "357627"
   },
   org: {
     name: 'Martínez Filoz & Asociados S.A.S.',
