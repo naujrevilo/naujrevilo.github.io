@@ -60,7 +60,7 @@ const basefm: Frontmatter = {
   <main
     class='max-w-8xl relative mx-auto flex justify-center bg-white dark:bg-slate-900 sm:px-2 lg:px-8 xl:px-12'
   >
-    <aside id='grid-left' class='grid-sidebar' title='Site Navigation'>
+    <aside id='grid-left' class='grid-sidebar' title='Navegación del sitio'>
       <LeftSidebar currentPage={currentPage} />
     </aside>
     <div id='grid-main'>
@@ -73,7 +73,7 @@ const basefm: Frontmatter = {
         <NextPrev base={import.meta.env.BASE_URL + 'doc/'} prev={prev} next={next} />
       </PageContent>
     </div>
-    <aside id='grid-right' class='grid-sidebar' title='Table of Contents'>
+    <aside id='grid-right' class='grid-sidebar' title='Índice'>
       <RightSidebar headings={headings} githubEditUrl={githubEditUrl} />
     </aside>
   </main>
