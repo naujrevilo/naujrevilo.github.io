@@ -18,7 +18,8 @@ export const SiteMetadata = {
     email: 'director@martinezfiloz.com',
     summary: 'Outrageous actualiser.',
     nuip: "73160051",
-    procard: "357627"
+    procard: "357627",
+    phone: "+573165157917"
   },
   org: {
     name: 'Martínez Filoz & Asociados S.A.S.',
@@ -26,7 +27,8 @@ export const SiteMetadata = {
     url: 'https://martinezfiloz.com',
     email: 'contacto@martinezfiloz.com',
     summary:
-      'Hello Tham is a boutique management consulting firm. We specialise in Business and IT strategies, operating models, strategic roadmaps, enterprise architecture, analytics and business process design.'
+      'Hello Tham is a boutique management consulting firm. We specialise in Business and IT strategies, operating models, strategic roadmaps, enterprise architecture, analytics and business process design.',
+    contact: '/contacto'
   },
   location: 'CALLE CARLOS ESCALLON Dg. 35 # 8-85 PISO 2 OFICINA 201 A, BARRIO CENTRO',
   latlng: [10.425297279374076, -75.54761700513578] as [number, number],
