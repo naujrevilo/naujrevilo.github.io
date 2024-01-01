@@ -21,8 +21,8 @@ export default defineConfig({
       noExternal: ['swiper', 'leaflet']
     }
   },
-  site: 'https://hellotham.github.io',
-  base: '/',
+  site: 'https://naujrevilo.github.io',
+  base: 'https://github.com/naujrevilo/martinezfiloz',
   integrations: [tailwind(), sitemap(), mdx(), alpinejs(), robotsTxt(), markdoc()],
   markdown: {
     extendDefaultPlugins: true,
