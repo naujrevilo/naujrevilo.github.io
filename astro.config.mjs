@@ -22,7 +22,7 @@ export default defineConfig({
     }
   },
   site: 'https://naujrevilo.github.io',
-  base: 'https://github.com/naujrevilo/martinezfiloz',
+  base: '/',
   integrations: [tailwind(), sitemap(), mdx(), alpinejs(), robotsTxt(), markdoc()],
   markdown: {
     extendDefaultPlugins: true,
