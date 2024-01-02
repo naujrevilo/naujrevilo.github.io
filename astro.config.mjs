@@ -10,8 +10,9 @@ import rehypeKatex from 'rehype-katex';
 import remarkPlantUML from '@akebifiky/remark-simple-plantuml';
 import { remarkReadingTime } from './remark-plugins/remark-reading-time.mjs';
 import { remarkDiagram } from './remark-plugins/remark-diagram.mjs';
-
 import markdoc from "@astrojs/markdoc";
+
+import tunnel from "astro-tunnel";
 
 // https://astro.build/config
 export default defineConfig({
@@ -21,9 +22,9 @@ export default defineConfig({
       noExternal: ['swiper', 'leaflet']
     }
   },
-  site: 'https://naujrevilo.github.io',
+  site: 'https://juanoliver.net',
   base: '/',
-  integrations: [tailwind(), sitemap(), mdx(), alpinejs(), robotsTxt(), markdoc()],
+  integrations: [tailwind(), sitemap(), mdx(), alpinejs(), robotsTxt(), markdoc(), tunnel()],
   markdown: {
     extendDefaultPlugins: true,
     remarkPlugins: [remarkReadingTime, remarkMath, remarkPlantUML, remarkDiagram, remarkEmoji],
@@ -33,7 +34,7 @@ export default defineConfig({
       langs: [],
       // Enable word wrap to prevent horizontal scrolling
       wrap: true
-    },
+    }
   },
-  scopedStyleStrategy: "where",
+  scopedStyleStrategy: "where"
 });
