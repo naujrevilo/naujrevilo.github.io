@@ -1,5 +1,6 @@
 ---
 title: Markdown Cheat Sheet
+slug: markdown-cheat-sheet
 description: A quick reference to the Markdown syntax.
 author: matt-cone
 publishDate: 2022-08-10T00:00:00.000Z
@@ -10,6 +11,7 @@ categories:
 tags:
   - markdown
   - reference
+preview: ../../assets/undraw/undraw_design_components.png
 ---
 
 ## Introduction
