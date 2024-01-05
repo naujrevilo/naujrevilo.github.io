@@ -2,6 +2,7 @@
   "$schema": "https://frontmatter.codes/frontmatter.schema.json",
   "frontMatter.framework.id": "astro",
   "frontMatter.preview.host": "http://localhost:4321",
+  "frontMatter.git.enabled setting": "true",
   "frontMatter.content.pageFolders": [
     {
       "path": "[[workspace]]/src/content/author",
@@ -21,7 +22,8 @@
     },
     {
       "title": "blog",
-      "path": "[[workspace]]/src/content/blog"
+      "path": "[[workspace]]/src/content/blog",
+      "previewPath": "'blog'"
     }
   ],
   "frontMatter.content.publicFolder": {
