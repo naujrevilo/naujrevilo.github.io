@@ -1,6 +1,6 @@
 {
   "name": "Email",
   "link": "mailto:contacto@martinezfiloz.com",
-  "icon": "mail ",
+  "icon": "tabler:mail ",
   "type": "is-mail"
 }

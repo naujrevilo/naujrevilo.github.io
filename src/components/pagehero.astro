@@ -1,6 +1,7 @@
 ---
-import { Image } from 'astro:assets'
+import {Image} from 'astro:assets'
 import { DefaultImage } from '../config'
+
 
 export interface Props {
   title: string
@@ -8,6 +9,7 @@ export interface Props {
   coverSVG?: ImageMetadata
   coverImage?: ImageMetadata
   socialImage?: ImageMetadata
+  class?: string
 }
 
 const { title, description, coverSVG, coverImage, socialImage } = Astro.props

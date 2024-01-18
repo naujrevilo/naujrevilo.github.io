@@ -1,30 +1,30 @@
 ---
-import { Icon } from 'astro-icon'
+import {Icon} from 'astro-icon'
 
 const features = [
   {
     name: 'Derecho civil',
     description:
       'El Código Civil comprende las disposiciones legales sustantivas que determinan especialmente los derechos de los particulares, por razón del estado de las personas, de sus bienes, obligaciones, contratos y acciones civiles.',
-    icon: 'outline-people'
+    icon: 'ic:outline-people'
   },
   {
     name: 'Derecho penal',
     description:
       'Es la rama del derecho público encargada de regular, castigar y establecer penas para aquellas personas naturales (civiles), que atentan y violentan contra las normas de convivencia o de conducta hacia otros sujetos o la nación',
-    icon: 'outline-view-column'
+    icon: 'ic:outline-view-column'
   },
   {
     name: 'Derecho comercial',
     description:
       'El Derecho Comercial es el ordenamiento jurídico que regula las relaciones jurídicas que surgen en torno de la empresa como elemento generador de riqueza patrimonial para los sujetos que involucra, como son los inversionistas, las sociedades, el empresario, el consumidor, el Estado, los trabajadores y su desarrollo dentro del mercado nacional e internacional.',
-    icon: 'outline-corporate-fare'
+    icon: 'ic:outline-corporate-fare'
   },
   {
     name: 'Derecho laboral',
     description:
       'El derecho laboral incluye todo, desde la contratación de recursos, la conducta, la promoción y las quejas en el lugar de trabajo hasta la terminación del empleo, ya sea voluntaria o forzada.',
-    icon: 'outline-engineering'
+    icon: 'ic:outline-engineering'
   }
 ]
 ---
@@ -46,7 +46,7 @@ const features = [
         Martínez Filoz & Asociados ofrece un servicio individualizado respaldado por los recursos necesarios para representar a nuestros clientes de manera eficiente y creativa. La amplitud de servicios ofrecidos por Martínez Filoz & Asociados elimina el dolor de cabeza de tener que manejar múltiples abogados, consultores y firmas externas para satisfacer sus necesidades legales y legislativas. Le invitamos a explorar cómo podemos poner nuestros recursos a trabajar para usted.
       </p>
     </div>
-
+  
     <div class='mt-10'>
       <dl class='space-y-10 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 md:space-y-0'>
         {
@@ -57,7 +57,6 @@ const features = [
                   <Icon
                     class='h-6 w-6'
                     aria-hidden='true'
-                    pack='ic'
                     name={feature.icon}
                   />
                 </div>

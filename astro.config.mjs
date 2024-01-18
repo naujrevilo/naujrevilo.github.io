@@ -11,8 +11,9 @@ import remarkPlantUML from '@akebifiky/remark-simple-plantuml';
 import { remarkReadingTime } from './remark-plugins/remark-reading-time.mjs';
 import { remarkDiagram } from './remark-plugins/remark-diagram.mjs';
 import markdoc from "@astrojs/markdoc";
-
 import tunnel from "astro-tunnel";
+
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
@@ -24,7 +25,7 @@ export default defineConfig({
   },
   site: 'https://juanoliver.net',
   base: '/',
-  integrations: [tailwind(), sitemap(), mdx(), alpinejs(), robotsTxt(), markdoc(), tunnel()],
+  integrations: [tailwind(), sitemap(), mdx(), alpinejs(), robotsTxt(), markdoc(), tunnel(), react()],
   markdown: {
     extendDefaultPlugins: true,
     remarkPlugins: [remarkReadingTime, remarkMath, remarkPlantUML, remarkDiagram, remarkEmoji],

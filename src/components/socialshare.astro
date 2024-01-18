@@ -1,45 +1,28 @@
 ---
-import { Icon } from 'astro-icon';
-
-export interface Props {
-  text: string;
-  url: string | URL;
-  class?: string;
-}
-
-const { text, url, class: className = 'inline-block' } = Astro.props;
+import { Frontmatter } from '../config'
+import { getShareUrl } from '../js/share'
+import Icon from 'astro-icon'
 ---
-
-<div class={className}>
-  <span class="align-super font-bold text-gray-400 dark:text-slate-400">Compartir:</span>
-  <button class="ml-2 rtl:ml-0 rtl:mr-2" title="Twitter Share" data-aw-social-share="twitter" data-aw-url={url} data-aw-text={text}
-    ><Icon
-      name="tabler:brand-twitter"
-      class="w-6 h-6 text-gray-400 dark:text-slate-500 hover:text-black dark:hover:text-slate-300"
-    />
-  </button>
-  <button class="ml-2 rtl:ml-0 rtl:mr-2" title="Facebook Share" data-aw-social-share="facebook" data-aw-url={url}
-    ><Icon
-      name="tabler:brand-facebook"
-      class="w-6 h-6 text-gray-400 dark:text-slate-500 hover:text-black dark:hover:text-slate-300"
-    />
-  </button>
-  <button class="ml-2 rtl:ml-0 rtl:mr-2" title="Linkedin Share" data-aw-social-share="linkedin" data-aw-url={url} data-aw-text={text}
-    ><Icon
-      name="tabler:brand-linkedin"
-      class="w-6 h-6 text-gray-400 dark:text-slate-500 hover:text-black dark:hover:text-slate-300"
-    />
-  </button>
-  <button class="ml-2 rtl:ml-0 rtl:mr-2" title="Whatsapp Share" data-aw-social-share="whatsapp" data-aw-url={url} data-aw-text={text}
-    ><Icon
-      name="tabler:brand-whatsapp"
-      class="w-6 h-6 text-gray-400 dark:text-slate-500 hover:text-black dark:hover:text-slate-300"
-    />
-  </button>
-  <button class="ml-2 rtl:ml-0 rtl:mr-2" title="Email Share" data-aw-social-share="mail" data-aw-url={url} data-aw-text={text}
-    ><Icon
-      name="tabler:mail"
-      class="w-6 h-6 text-gray-400 dark:text-slate-500 hover:text-black dark:hover:text-slate-300"
-    />
-  </button>
+<div class="flex flex-wrap justify-end ">
+  <span class='mr-1 font-medium text-slate-700 dark:text-slate-300'>Compartir:</span>
+      <a href={getShareUrl('facebook', Astro.url)} target="_blank" rel="noopener">
+        <Icon name="brand-facebook" width="35" height="35px" />
+      </a>
+    
+      <a href={getShareUrl('twitter', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
+        <Icon name="brand-x" width="35" height="35px" />
+      </a>
+    
+      <a href={getShareUrl('linkedin', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
+        <Icon name="brand-linkedin" width="35" height="35px" />
+      </a>
+    
+      <a href={getShareUrl('whatsapp', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
+        <Icon name="brand-whatsapp" width="35" height="35px" />
+      </a>
+      
+        <a href={getShareUrl('email', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
+          <Icon name="mail-forward" width="35" height="35px" />
+        </a>
 </div>
+

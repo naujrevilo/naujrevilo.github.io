@@ -1,12 +1,12 @@
 ---
 import type { CollectionEntry } from 'astro:content'
-import type { Frontmatter } from '../config'
+import { Frontmatter, SiteMetadata } from '../config'
 import Base from '../layouts/base.astro'
 import BlogHero from '../components/bloghero.astro'
 import NextPrev from '../components/nextprev.astro'
 import Images from '../components/images.astro'
-import Socialshare from '../components/socialshare.astro'
 import { Blog } from 'schema-dts'
+import Socialshare from '../components/socialshare.astro'
 
 export interface Props {
   frontmatter: Frontmatter
@@ -32,14 +32,16 @@ const { frontmatter, prev, next } = Astro.props
       >
         {frontmatter.images && <Images images={frontmatter.images} />}
         <slot />
-        <Socialshare url={url} text={frontmatter.title} class="mt-5 sm:mt-1 align-middle text-gray-500 dark:text-slate-600" />
+        
+        <Socialshare />
       </section>
     </article>
+  
   </main>
   <NextPrev
-    slot='before-footer'
-    base={import.meta.env.BASE_URL + 'blog/'}
-    prev={prev}
-    next={next}
+  slot='before-footer'
+  base={import.meta.env.BASE_URL + 'blog/'}
+  prev={prev}
+  next={next}
   />
 </Base>

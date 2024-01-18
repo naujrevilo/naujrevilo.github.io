@@ -13,17 +13,18 @@ export const SiteMetadata = {
   description: 'An Astro starter for corporate/marketing/blog websites.',
   author: {
     name: 'Richard Martínez',
-    twitter: '@RMFABOGADOS',
+    twitter: 'RMFABOGADOS',
     url: 'https://martinezfiloz.com',
     email: 'director@martinezfiloz.com',
     summary: 'Outrageous actualiser.',
     nuip: "73160051",
     procard: "357627",
-    phone: "+573165157917"
+    phone: "+573165157917",
+    origin: 'https://jonathanfalcon.com'
   },
   org: {
     name: 'Martínez Filoz & Asociados S.A.S.',
-    twitter: '@RMFABOGADOS',
+    twitter: 'RMFABOGADOS',
     url: 'https://martinezfiloz.com',
     email: 'contacto@martinezfiloz.com',
     summary:
@@ -36,8 +37,9 @@ export const SiteMetadata = {
   buildTime: new Date()
 }
 
-export { default as Logo } from './assets/svg/astro/astro-icon-dark.svg'
-export { default as LogoImage } from './assets/astro/astro-logo-dark.png'
+export { default as Logo } from './assets/svg/logo.svg'
+export { default as LogoDark } from './assets/svg/logo-dark.svg'
+export { default as LogoImage } from './assets/logo.png'
 export { default as FeaturedSVG } from './assets/svg/undraw/undraw_design_inspiration.svg'
 export { default as DefaultSVG } from './assets/svg/undraw/undraw_my_feed.svg'
 export { default as DefaultImage } from './assets/undraw/undraw_my_feed.png'
@@ -49,6 +51,7 @@ export const NavigationLinks = [
   { name: 'Acerca', href: 'acerca' },
   { name: 'Contacto', href: 'contacto' },
 ]
+
 
 export const PAGE_SIZE = 6
 

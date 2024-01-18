@@ -1,6 +1,6 @@
 ---
 title: Alerta sobre correos electrónicos fraudulentos
-description: Alerta sobre correos electrónicos fraudulentos
+description: Alerta sobre correos electrónicos fraudulentos reortada por la Rama Judicial
 date: 2024-01-05T16:33:34.092Z
 preview: ../../assets/undraw/undraw_contact_us.png
 draft: false

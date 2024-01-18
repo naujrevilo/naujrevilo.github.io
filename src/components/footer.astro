@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content'
 import { Icon } from 'astro-icon'
 import { Logo } from '../config'
+import { LogoDark } from '../config'
 
 const social = await getCollection('social')
 ---
@@ -16,7 +17,8 @@ const social = await getCollection('social')
         class='title-font dark:text:gray-100 flex items-center justify-center font-medium text-gray-900 lg:justify-start'
         href={import.meta.env.BASE_URL}
       >
-        <img src={Logo.src} alt='Footer Logo' class='h-6 w-6 dark:bg-gray-100' loading='lazy' />
+      <img class='block dark:hidden h-8 w-8' src={Logo.src} alt='Footer Logo' loading="lazy"/>
+      <img class='h-16 w-32 hidden dark:block' src={LogoDark.src} alt='Footer Logo' loading="lazy"/>
         <span class='sr-only'>Logo</span>
       </a>
       <p
@@ -77,7 +79,7 @@ const social = await getCollection('social')
               rel='noopener noreferrer'
               target='_blank'
             >
-              <Icon pack='tabler' name={s.data.icon} class=' h-5 w-5' />
+              <Icon name={s.data.icon} class=' h-5 w-5' />
               <span class='sr-only'>{s.data.name}</span>
             </a>
           ) : (

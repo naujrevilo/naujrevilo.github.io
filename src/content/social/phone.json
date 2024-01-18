@@ -1,6 +1,6 @@
 {
   "name": "Teléfono",
   "link": "tel:+573165157917",
-  "icon": "phone-call",
+  "icon": "tabler:phone-call",
   "type": "is-tel"
 }

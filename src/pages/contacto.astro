@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon'
+import Icon from 'astro-icon'
 import Base from '../layouts/base.astro'
 import Map from '../components/map.astro'
 import PageHero from '../components/pagehero.astro'
@@ -48,7 +48,6 @@ const social = await getCollection('social')
                         <div class='flex items-start'>
                           <div class='shrink-0'>
                             <Icon
-                              pack='tabler'
                               name={method.data.icon}
                               class='flex h-14 w-14 items-center justify-center rounded-md bg-sky-600 p-0 text-white shadow-md mx-1'
                             />

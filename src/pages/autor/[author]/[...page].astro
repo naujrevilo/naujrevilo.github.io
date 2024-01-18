@@ -23,13 +23,13 @@ const detail = await getEntry('author', author!)
 
 const frontmatter: Frontmatter = {
   title:
-    'Author: ' +
+    'Autor: ' +
     detail!.data.title +
-    (page.size < page.total ? ' (page ' + page.currentPage + ' of ' + page.lastPage + ')' : ''),
+    (page.size < page.total ? ' (página(s) ' + page.currentPage + ' de ' + page.lastPage + ')' : ''),
   description:
     detail!.data.description +
     '. ' +
-    'Showing articles ' +
+    'Mostrando artículo(s) ' +
     (page.start + 1) +
     '-' +
     (page.end + 1) +
@@ -59,6 +59,7 @@ export async function getStaticPaths({ paginate }: { paginate: PaginateFunction 
   })
 }
 ---
+<!-- Página de autor individual - Muestra los artículos de un autor en particular -->
 
 <Base frontmatter={frontmatter}>
   <header>
