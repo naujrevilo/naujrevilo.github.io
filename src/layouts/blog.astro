@@ -10,15 +10,14 @@ import Socialshare from '../components/socialshare.astro'
 
 export interface Props {
   frontmatter: Frontmatter
-  post: Blog;
-  url: string | URL;
+  post: Blog
+  url: string | URL
   prev?: CollectionEntry<'blog'>
   next?: CollectionEntry<'blog'>
 }
 
-const { post, url } = Astro.props;
+const { post, url } = Astro.props
 const { frontmatter, prev, next } = Astro.props
-
 ---
 
 <Base frontmatter={frontmatter}>
@@ -28,20 +27,19 @@ const { frontmatter, prev, next } = Astro.props
         <BlogHero frontmatter={frontmatter} />
       </header>
       <section
-        class='prose prose-purple mx-auto my-8 max-w-screen-lg px-4 dark:prose-invert lg:prose-xl lg:px-0'
+        class='prose prose-purple mx-auto my-8 max-w-screen-lg px-4 lg:prose-xl dark:prose-invert lg:px-0'
       >
         {frontmatter.images && <Images images={frontmatter.images} />}
         <slot />
-        
+
         <Socialshare />
       </section>
     </article>
-  
   </main>
   <NextPrev
-  slot='before-footer'
-  base={import.meta.env.BASE_URL + 'blog/'}
-  prev={prev}
-  next={next}
+    slot='before-footer'
+    base={import.meta.env.BASE_URL + 'blog/'}
+    prev={prev}
+    next={next}
   />
 </Base>

@@ -25,7 +25,9 @@ const frontmatter: Frontmatter = {
   title:
     'Autor: ' +
     detail!.data.title +
-    (page.size < page.total ? ' (página(s) ' + page.currentPage + ' de ' + page.lastPage + ')' : ''),
+    (page.size < page.total
+      ? ' (página(s) ' + page.currentPage + ' de ' + page.lastPage + ')'
+      : ''),
   description:
     detail!.data.description +
     '. ' +
@@ -59,8 +61,8 @@ export async function getStaticPaths({ paginate }: { paginate: PaginateFunction 
   })
 }
 ---
-<!-- Página de autor individual - Muestra los artículos de un autor en particular -->
 
+<!-- Página de autor individual - Muestra los artículos de un autor en particular -->
 <Base frontmatter={frontmatter}>
   <header>
     <PageHero

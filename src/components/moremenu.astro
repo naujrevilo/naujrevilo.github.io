@@ -22,19 +22,15 @@ const showMoreSection = COMMUNITY_INVITE_URL
       <ol role='list' class='mt-4 flex flex-col space-y-3 text-sm'>
         {editHref && (
           <li class='flex items-center py-1 text-gray-500 dark:text-gray-400'>
-            <Icon pack="heroicons-outline" name='pencil' class='mr-2 h-6 w-6' />
-            <a
-              class='hover:text-sky-600 dark:hover:text-sky-300'
-              href={editHref}
-              target='_blank'
-            >
+            <Icon pack='heroicons-outline' name='pencil' class='mr-2 h-6 w-6' />
+            <a class='hover:text-sky-600 dark:hover:text-sky-300' href={editHref} target='_blank'>
               <span>Editar esta página</span>
             </a>
           </li>
         )}
         {COMMUNITY_INVITE_URL && (
           <li class='flex items-center py-1 text-gray-500 dark:text-gray-400'>
-            <Icon pack="heroicons-outline" name='chat-alt-2' class='mr-2 h-6 w-6' />
+            <Icon pack='heroicons-outline' name='chat-alt-2' class='mr-2 h-6 w-6' />
             <a
               class='hover:text-sky-600 dark:hover:text-sky-300'
               href={COMMUNITY_INVITE_URL}
