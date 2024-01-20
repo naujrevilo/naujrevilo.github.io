@@ -6,8 +6,9 @@ import { SiteMetadata } from '../config'
   <div
     class='mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:flex lg:items-center lg:justify-between lg:px-8 lg:py-16'
   >
-    <h2 class='text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl'>
-      <span class='block dark:text-white'>¿Está experimentando problemas que requieren ayuda legal? 
+    <h2 class='text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-100'>
+      <span class='block dark:text-white'
+        >¿Está experimentando problemas que requieren ayuda legal?
       </span>
       <span class='block text-sky-600 dark:text-sky-300'
         >Richard Martínez Filoz está aquí para ayudarle.
@@ -16,13 +17,12 @@ import { SiteMetadata } from '../config'
     <div class='mt-8 flex lg:mt-0 lg:flex-shrink-0'>
       <div class='inline-flex rounded-md shadow'>
         <a
-          href={'tel:'+ SiteMetadata.author.phone}
+          href={'tel:' + SiteMetadata.author.phone}
           class='inline-flex items-center justify-center rounded-md border border-transparent bg-sky-600 px-5 py-3 text-base font-medium text-white hover:bg-amber-600'
         >
           Llámenos
         </a>
       </div>
-      
     </div>
   </div>
 </div>

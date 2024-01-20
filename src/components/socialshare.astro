@@ -3,26 +3,42 @@ import { Frontmatter } from '../config'
 import { getShareUrl } from '../js/share'
 import Icon from 'astro-icon'
 ---
-<div class="flex flex-wrap justify-end ">
-  <span class='mr-1 font-medium text-slate-700 dark:text-slate-300'>Compartir:</span>
-      <a href={getShareUrl('facebook', Astro.url)} target="_blank" rel="noopener">
-        <Icon name="brand-facebook" width="35" height="35px" />
-      </a>
-    
-      <a href={getShareUrl('twitter', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
-        <Icon name="brand-x" width="35" height="35px" />
-      </a>
-    
-      <a href={getShareUrl('linkedin', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
-        <Icon name="brand-linkedin" width="35" height="35px" />
-      </a>
-    
-      <a href={getShareUrl('whatsapp', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
-        <Icon name="brand-whatsapp" width="35" height="35px" />
-      </a>
-      
-        <a href={getShareUrl('email', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
-          <Icon name="mail-forward" width="35" height="35px" />
-        </a>
-</div>
 
+<div class='flex flex-wrap justify-end'>
+  <span class='mr-1 font-medium text-slate-700 dark:text-slate-300'>Compartir:</span>
+  <a href={getShareUrl('facebook', Astro.url)} target='_blank' rel='noopener'>
+    <Icon name='brand-facebook' width='35' height='35px' />
+  </a>
+
+  <a
+    href={getShareUrl('twitter', Astro.url, 'Check out this blog post!')}
+    target='_blank'
+    rel='noopener'
+  >
+    <Icon name='brand-x' width='35' height='35px' />
+  </a>
+
+  <a
+    href={getShareUrl('linkedin', Astro.url, 'Check out this blog post!')}
+    target='_blank'
+    rel='noopener'
+  >
+    <Icon name='brand-linkedin' width='35' height='35px' />
+  </a>
+
+  <a
+    href={getShareUrl('whatsapp', Astro.url, 'Check out this blog post!')}
+    target='_blank'
+    rel='noopener'
+  >
+    <Icon name='brand-whatsapp' width='35' height='35px' />
+  </a>
+
+  <a
+    href={getShareUrl('email', Astro.url, 'Check out this blog post!')}
+    target='_blank'
+    rel='noopener'
+  >
+    <Icon name='mail-forward' width='35' height='35px' />
+  </a>
+</div>

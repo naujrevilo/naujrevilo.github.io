@@ -13,8 +13,7 @@ export interface Props {
     coverSVG: string
     socialImage: string
     firstItemPadding?: boolean
-    }
-
+  }
 }
 const firstItemPadding = true
 const { frontmatter } = Astro.props
@@ -46,16 +45,14 @@ const fm: Frontmatter = {
         />
       </header>
       <section
-        class='prose prose-sky mx-auto my-8 max-w-screen-lg px-4 dark:prose-invert lg:prose-xl lg:px-0'
+        class='prose prose-sky mx-auto my-8 max-w-screen-lg px-4 lg:prose-xl dark:prose-invert lg:px-0'
       >
-      <main
-      class={firstItemPadding && '[&>:first-child]:pt-24 [&>:first-child]:md:pt-28'}
-  >
-      <slot />
-  </main>
-) : (
-  <slot />
-)
+        <main class={firstItemPadding && '[&>:first-child]:pt-24 [&>:first-child]:md:pt-28'}>
+          <slot />
+        </main>
+        ) : (
+        <slot />
+        )
       </section>
     </article>
   </main>

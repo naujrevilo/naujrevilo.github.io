@@ -18,24 +18,24 @@ const otherPosts = posts.slice(1, 5)
   <div class='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
     <div class='mx-auto max-w-2xl py-8 sm:py-12 lg:max-w-none lg:py-16'>
       <div class='flex flex-row items-center'>
-        <h2 class='text-2xl font-extrabold text-sky-800 dark:text-sky-200 md:text-4xl'>
+        <h2 class='text-2xl font-extrabold text-sky-800 md:text-4xl dark:text-sky-200'>
           Nuestros últimos artículos
         </h2>
         <a
           href={import.meta.env.BASE_URL + 'blog'}
-          class='ml-4 mt-2 inline-block rounded-md bg-sky-600 px-2 py-2 text-base font-bold text-white hover:bg-amber-600 dark:bg-sky-300 dark:text-black dark:hover:bg-amber-300 md:px-6 md:py-3 md:text-lg'
+          class='ml-4 mt-2 inline-block rounded-md bg-sky-600 px-2 py-2 text-base font-bold text-white hover:bg-amber-600 md:px-6 md:py-3 md:text-lg dark:bg-sky-300 dark:text-black dark:hover:bg-amber-300'
         >
           Todos los artículos
         </a>
         <a
           href={import.meta.env.BASE_URL + 'categorias'}
-          class='ml-4 mt-2 inline-block rounded-md bg-sky-100 px-2 py-2 text-base font-bold text-sky-800 hover:bg-amber-200 dark:bg-sky-900 dark:text-sky-100 dark:hover:bg-amber-900 md:px-6 md:py-3 md:text-lg'
+          class='ml-4 mt-2 inline-block rounded-md bg-sky-100 px-2 py-2 text-base font-bold text-sky-800 hover:bg-amber-200 md:px-6 md:py-3 md:text-lg dark:bg-sky-900 dark:text-sky-100 dark:hover:bg-amber-900'
         >
           Categorías
         </a>
         <a
           href={import.meta.env.BASE_URL + 'etiquetas'}
-          class='ml-4 mt-2 inline-block rounded-md bg-sky-100 px-2 py-2 text-base font-bold text-sky-800 hover:bg-amber-200 dark:bg-sky-900 dark:text-sky-100 dark:hover:bg-amber-900 md:px-6 md:py-3 md:text-lg'
+          class='ml-4 mt-2 inline-block rounded-md bg-sky-100 px-2 py-2 text-base font-bold text-sky-800 hover:bg-amber-200 md:px-6 md:py-3 md:text-lg dark:bg-sky-900 dark:text-sky-100 dark:hover:bg-amber-900'
         >
           Etiquetas
         </a>
@@ -49,14 +49,14 @@ const otherPosts = posts.slice(1, 5)
                 <img
                   src={newestPost.data.coverSVG.src}
                   alt={newestPost.data.title + ' featured image'}
-                  class='h-64 w-full rounded-md bg-sky-100 object-cover dark:bg-sky-800 md:h-80'
+                  class='h-64 w-full rounded-md bg-sky-100 object-cover md:h-80 dark:bg-sky-800'
                   loading='lazy'
                 />
               ) : (
                 <Image
                   src={newestPost.data.coverImage || newestPost.data.socialImage || DefaultImage}
                   alt={newestPost.data.title + ' featured image'}
-                  class='h-64 w-full rounded-md bg-sky-100 object-cover dark:bg-sky-800 md:h-80'
+                  class='h-64 w-full rounded-md bg-sky-100 object-cover md:h-80 dark:bg-sky-800'
                   loading='lazy'
                 />
               )
@@ -95,29 +95,29 @@ const otherPosts = posts.slice(1, 5)
                     <img
                       src={post.data.coverSVG.src}
                       alt={post.data.title + ' featured image'}
-                      class='block h-64 w-full rounded-md bg-sky-100 object-cover p-4 dark:bg-sky-800 md:h-32 md:p-0 lg:block'
+                      class='block h-64 w-full rounded-md bg-sky-100 object-cover p-4 md:h-32 md:p-0 lg:block dark:bg-sky-800'
                       loading='lazy'
                     />
                   ) : (
                     <Image
                       src={post.data.coverImage || post.data.socialImage || DefaultImage}
                       alt={post.data.title + ' featured image'}
-                      class='block h-64 w-full rounded-md bg-sky-100 object-cover p-4 dark:bg-sky-800 md:h-32 md:p-0 lg:block'
+                      class='block h-64 w-full rounded-md bg-sky-100 object-cover p-4 md:h-32 md:p-0 lg:block dark:bg-sky-800'
                       loading='lazy'
                     />
                   )}
                 </a>
-                <div class='rounded bg-white px-4 dark:bg-gray-800 md:col-span-2'>
+                <div class='rounded bg-white px-4 md:col-span-2 dark:bg-gray-800'>
                   {post.data.categories && <Categories categories={post.data.categories} />}
                   <a href={import.meta.env.BASE_URL + 'blog/' + post.slug}>
-                    <div class='text-xl font-semibold text-gray-800 dark:text-gray-100 md:mt-1'>
+                    <div class='text-xl font-semibold text-gray-800 md:mt-1 dark:text-gray-100'>
                       {post.data.title}
                     </div>
                   </a>
                   <p class='block text-sm text-gray-600 dark:text-gray-300'>
                     {post.data.publishDate?.toDateString()}
                   </p>
-                  <p class='block text-sm text-gray-600 dark:text-gray-300 md:hidden'>
+                  <p class='block text-sm text-gray-600 md:hidden dark:text-gray-300'>
                     {post.data.description}
                   </p>
                 </div>
