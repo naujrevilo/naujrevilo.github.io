@@ -1,0 +1,32 @@
+---
+
+import { Image } from 'astro:assets'
+
+export interface Props {
+  info: {
+    id: string
+    image: { url: string; alt: string }
+    icon?: string
+    title: string
+    description: string
+  }
+  className: string
+}
+
+const { info, className } = Astro.props
+
+
+---
+
+<div class={`${className} item`}>
+  <a href={`/servicios/${info.id}`} class="iitem item-style">
+      <div class="iitem-icon">
+          <i class="material-icons material-icons-outlined md-48">{info.icon}</i>
+      </div>
+      <div class="iitem-icon-bg">
+          <i class="material-icons material-icons-outlined">{info.icon}</i>
+      </div>
+      <h3 class="iitem-heading item-heading-large">{info.title}</h3>
+      <div class="iitem-desc">{info.description}</div>
+  </a>
+</div>

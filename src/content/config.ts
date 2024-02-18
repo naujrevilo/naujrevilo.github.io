@@ -65,11 +65,24 @@ const socialCollection = defineCollection({
   })
 })
 
+const servicesCollection = defineCollection({
+  type: "data",
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    contact: reference("author"),
+    available: z.boolean(),
+    tags: z.array(z.enum(["civil", "penal", "comercial", "familia", "laboral", "constitucional", "administrativo"])),
+  }),
+})
+
+
 // 3. Export multiple collections to register them
 export const collections = {
   blog: blogCollection,
   doc: docCollection,
   category: categoryCollection,
   author: authorCollection,
-  social: socialCollection
+  social: socialCollection,
+  service: servicesCollection
 }
