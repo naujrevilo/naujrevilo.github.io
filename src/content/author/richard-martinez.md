@@ -1,6 +1,6 @@
 ---
 title: 'Richard Martínez Filoz'
-description: 'Ingeniero/Especialista en seguridad informática'
-contact: 'joliver@juanoliver.net'
-image: ./Juan Oliver.jpg
+description: 'Abogado'
+contact: 'martinezfilozasociados@gmail.com'
+image: ./Richard Martinez.webp
 ---

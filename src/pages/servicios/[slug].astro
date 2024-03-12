@@ -1,0 +1,49 @@
+---
+import type { Frontmatter } from '../../config'
+import type { CollectionEntry } from 'astro:content'
+import { getCollection } from 'astro:content'
+import Layout from '../../layouts/markdownPostLayout.astro'
+import Prose from '../../components/Prose.astro'
+
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+  let servicios = await getCollection('servicios', ({ data }) => {
+    return data.draft !== true
+  })
+  servicios = servicios.sort((a, b) => +b.data.publishDate - +a.data.publishDate)
+  return servicios.map((servicio, i) => ({
+    params: { slug: servicio.slug },
+    props: {
+      servicio,
+      prev: i > 0 && servicios[i - 1],
+      next: i < servicios.length - 1 && servicios[i + 1]
+    }
+  }))
+}
+
+export interface Props {
+  post: CollectionEntry<'servicios'>
+  prev: CollectionEntry<'servicios'>
+  next: CollectionEntry<'servicios'>
+}
+
+// 2. When its time to render, you can get the entry directly from the prop
+const { servicio, prev, next } = Astro.props
+
+// @ts-ignore
+const { Content, remarkPluginFrontmatter } = await servicio.render()
+let fm = (servicio as CollectionEntry<'servicios'>).data
+const rfm = remarkPluginFrontmatter as Frontmatter
+
+
+if (rfm) {
+//   fm.minutesRead = rfm.minutesRead
+  fm.extra = rfm.extra
+}
+---
+
+<Layout frontmatter={fm} {prev} {next}>
+  <Prose>
+    <Content />
+  </Prose>
+</Layout>

@@ -89,6 +89,11 @@
       "title": "blog",
       "path": "[[workspace]]/src/content/blog",
       "previewPath": "'blog'"
+    },
+    {
+      "title": "Servicios",
+      "path": "[[workspace]]/src/content/servicios",
+      "previewPath": "'services'"
     }
   ],
   "frontMatter.content.publicFolder": {

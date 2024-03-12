@@ -6,22 +6,22 @@ import { getCollection } from 'astro:content'
 import { SiteMetadata, PAGE_SIZE } from '../../config'
 import Base from '../../layouts/base.astro'
 import PageHero from '../../components/pagehero.astro'
-import BlogRoll from '../../components/blogroll.astro'
-import PaginateControl from '../../components/paginatecontrol.astro'
-import coverSVG from '../../assets/svg/undraw/undraw_my_feed.svg'
+import Serviceroll from '../../components/serviceroll.astro'
+import PaginateControl from '../../components/paginatecontrolServices.astro'
+import coverSVG from '../../assets/undraw/undraw_interview_re_e5jn.svg'
 import socialImage from '../../assets/undraw/undraw_my_feed.png'
 
 export interface Props {
-  page: Page<CollectionEntry<'blog'>>
+  page: Page<CollectionEntry<'servicios'>>
 }
 
 const { page } = Astro.props
 
 const frontmatter: Frontmatter = {
   title:
-    'Blog' +
+    'Servicios' +
     (page.size < page.total ? ' (Página ' + page.currentPage + ' de ' + page.lastPage + ')' : ''),
-  description: 'Ver nuestros artículos.',
+  description: 'Ver nuestros servicios.',
   coverSVG: coverSVG,
   socialImage: socialImage,
   publishDate: SiteMetadata.buildTime
@@ -29,12 +29,12 @@ const frontmatter: Frontmatter = {
 
 const currentPage = Astro.url.pathname.replace(/(\/\d*)?\/$/, '')
 export async function getStaticPaths({ paginate }: { paginate: PaginateFunction }) {
-  const allPosts = await getCollection('blog', ({ data }) => {
+  const allPosts = await getCollection('servicios', ({ data }) => {
     return data.draft !== true
   })
-  const posts = allPosts.sort((a, b) => +b.data.publishDate - +a.data.publishDate)
+  const servicios = allPosts.sort((a, b) => +b.data.publishDate - +a.data.publishDate)
 
-  return paginate(posts, { pageSize: PAGE_SIZE })
+  return paginate(servicios, { pageSize: PAGE_SIZE })
 }
 ---
 
@@ -49,7 +49,7 @@ export async function getStaticPaths({ paginate }: { paginate: PaginateFunction 
       <PaginateControl base={currentPage} page={page} />
     </PageHero>
   </header>
-  <main class='mt-10 bg-gray-100 dark:bg-gray-900'>
-    <BlogRoll posts={page.data} />
+  <main class='bg-gray-100 dark:bg-gray-900'>
+    <Serviceroll servicios={page.data} />
   </main>
 </Base>

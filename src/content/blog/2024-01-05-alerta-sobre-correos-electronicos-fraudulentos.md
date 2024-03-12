@@ -10,7 +10,7 @@ tags:
     - info
 categories:
     - general
-author: juan-oliver
+author: richard-martinez
 publishDate: 2024-01-05T16:33:34.093Z
 coverSVG: ../../assets/undraw/undraw_contact_us.png
 socialImage: ../../assets/undraw/undraw_contact_us.png

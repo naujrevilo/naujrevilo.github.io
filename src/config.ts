@@ -48,7 +48,7 @@ export const NavigationLinks = [
   { name: 'Inicio', href: '' },
   { name: 'Servicios', href: 'servicios' },
   { name: 'Blog', href: 'blog' },
-  { name: 'Docs', href: 'doc/introduction' },
+  // { name: 'Docs', href: 'doc/introduction' },
   { name: 'Acerca', href: 'acerca' },
   { name: 'Contacto', href: 'contacto' },
 ]

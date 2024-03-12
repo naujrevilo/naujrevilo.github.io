@@ -1,0 +1,14 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import ServiceCard from '../components/servicecard.astro'
+
+export interface Props {
+  servicios: CollectionEntry<'servicios'>[]
+}
+
+const { servicios } = Astro.props
+---
+
+<div class='flex flex-wrap space-y-12 lg:space-y-0 dark:bg-gray-900'>
+  {servicios.map((servicio) => <ServiceCard servicio={servicio} />)}
+</div>

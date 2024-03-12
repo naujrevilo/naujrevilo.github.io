@@ -3,14 +3,14 @@ import type { CollectionEntry } from 'astro:content'
 
 export interface Props {
   base: string
-  prev: CollectionEntry<'blog'> | CollectionEntry<'doc'> | undefined
-  next: CollectionEntry<'blog'> | CollectionEntry<'doc'> | undefined
+  prev: CollectionEntry<'blog'> | CollectionEntry<'doc'> | CollectionEntry<'servicios'> | undefined
+  next: CollectionEntry<'blog'> | CollectionEntry<'doc'> | CollectionEntry<'servicios'> | undefined
 }
 
 const { base, prev, next } = Astro.props
 ---
 
-<dl class='mt-12 flex border-t border-sky-300 pt-6 dark:border-sky-700'>
+<dl class='mb-12 mt-12 flex border-t border-sky-300 pt-6 dark:border-sky-700'>
   {
     prev && (
       <div class='mr-auto text-left'>

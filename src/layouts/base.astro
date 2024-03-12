@@ -71,15 +71,19 @@ const { frontmatter } = Astro.props
       <script type="module">
         // import mermaid from 'mermaid';
         import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
-        mermaid.initialize({ startOnLoad: true });
+        mermaid.initialize({
+          startOnLoad: true,
+        });
       </script>
     }
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 
     <script src="../js/share.js" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+
   </head>
   
-  <body class='dark:bg-gray-900'>
+  <body class='mb-8 dark:bg-gray-900'>
     <Header />
     <slot />
     {frontmatter.gallery && <Gallery folder={frontmatter.gallery} />}
@@ -90,5 +94,7 @@ const { frontmatter } = Astro.props
         <script src='https://cdn.jsdelivr.net/npm/markmap-autoloader' />
       )
     }
+    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
   </body>
 </html>

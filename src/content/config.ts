@@ -19,7 +19,7 @@ const blogCollection = defineCollection({
       tags: z.array(z.string()).optional(),
       extra: z.array(z.enum(['math', 'markmap', 'mermaid', 'gallery'])).optional(),
       minutesRead: z.string().optional()
-    })
+  })
 })
 
 const docCollection = defineCollection({
@@ -66,14 +66,22 @@ const socialCollection = defineCollection({
 })
 
 const servicesCollection = defineCollection({
-  type: "data",
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    contact: reference("author"),
-    available: z.boolean(),
-    tags: z.array(z.enum(["civil", "penal", "comercial", "familia", "laboral", "constitucional", "administrativo"])),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      draft: z.boolean().optional(),
+      title: z.string(),
+      description: z.string(),
+      author: reference("author"),
+      publishDate:z.date(),
+      tags: z.array(z.enum(["civil", "penal", "comercial", "familia", "laboral", "constitucional", "administrativo", "auditoria", "empresas"])),
+      coverSVG: image().optional(),
+      coverImage: image().optional(),
+      socialImage: image().optional(),
+      images: z.array(image()).optional(),
+      gallery: z.string().optional(),
+      categories: z.array(reference('category')).optional(),
+      extra: z.array(z.enum(['math', 'markmap', 'mermaid', 'gallery'])).optional(),
+    }),
 })
 
 
@@ -84,5 +92,5 @@ export const collections = {
   category: categoryCollection,
   author: authorCollection,
   social: socialCollection,
-  service: servicesCollection
+  servicios: servicesCollection
 }

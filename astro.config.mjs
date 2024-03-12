@@ -12,7 +12,7 @@ import { remarkReadingTime } from './remark-plugins/remark-reading-time.mjs';
 import { remarkDiagram } from './remark-plugins/remark-diagram.mjs';
 import markdoc from "@astrojs/markdoc";
 import tunnel from "astro-tunnel";
-
+import remarkMermaid from 'astro-diagram/remark-mermaid';
 import react from "@astrojs/react";
 
 // https://astro.build/config
@@ -28,10 +28,10 @@ export default defineConfig({
   integrations: [tailwind(), sitemap(), mdx(), alpinejs(), robotsTxt(), markdoc(), tunnel(), react()],
   markdown: {
     extendDefaultPlugins: true,
-    remarkPlugins: [remarkReadingTime, remarkMath, remarkPlantUML, remarkDiagram, remarkEmoji],
+    remarkPlugins: [remarkReadingTime, remarkMath, remarkPlantUML, remarkDiagram, remarkMermaid, remarkEmoji],
     rehypePlugins: [rehypeKatex],
     shikiConfig: {
-      theme: 'github-light',
+      theme: 'github-dark',
       langs: [],
       // Enable word wrap to prevent horizontal scrolling
       wrap: true
