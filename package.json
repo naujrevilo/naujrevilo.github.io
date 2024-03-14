@@ -1,7 +1,7 @@
 {
-  "name": "hello-astro",
-  "description": "Hello Astro is a full featured Astro corporate/marketing/blog starter theme written in Typescript and TailwindCSS. It supports Markdown and MDX based pages and blog posts.",
-  "version": "3.2.2",
+  "name": "martinezfiloz",
+  "description": "Sitio web de servicios legales en la ciudad de Cartagena principalmente, y el resto de Colombia.",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "clean": "rm -rf node_modules .astro dist",
@@ -95,5 +95,5 @@
     "sharp": "^0.33.2",
     "swiper": "^11.0.7"
   },
-  "packageManager": "pnpm@8.5.1"
+  "packageManager": "pnpm@8.15.4"
 }
