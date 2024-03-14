@@ -68,7 +68,7 @@ const { frontmatter } = Astro.props
     }
     <slot name='in-head' />
     {frontmatter.extra?.includes('mermaid') &&
-      <script type="module">
+      <script type="module" is:inline>
         // import mermaid from 'mermaid';
         import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
         mermaid.initialize({
@@ -76,7 +76,7 @@ const { frontmatter } = Astro.props
         });
       </script>
     }
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js" is:inline></script>
 
     <script src="../js/share.js" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />

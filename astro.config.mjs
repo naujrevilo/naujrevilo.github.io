@@ -15,6 +15,8 @@ import tunnel from "astro-tunnel";
 import remarkMermaid from 'astro-diagram/remark-mermaid';
 import react from "@astrojs/react";
 
+import icon from "astro-icon";
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
@@ -25,7 +27,7 @@ export default defineConfig({
   },
   site: 'https://juanoliver.net',
   base: '/',
-  integrations: [tailwind(), sitemap(), mdx(), alpinejs(), robotsTxt(), markdoc(), tunnel(), react()],
+  integrations: [tailwind(), sitemap(), mdx(), alpinejs(), robotsTxt(), markdoc(), tunnel(), react(), icon()],
   markdown: {
     extendDefaultPlugins: true,
     remarkPlugins: [remarkReadingTime, remarkMath, remarkPlantUML, remarkDiagram, remarkMermaid, remarkEmoji],

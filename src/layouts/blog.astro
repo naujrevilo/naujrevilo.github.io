@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content'
-import { Frontmatter, SiteMetadata } from '../config'
+import { Frontmatter } from '../config'
 import Base from './base.astro'
 import BlogHero from '../components/bloghero.astro'
 import NextPrev from '../components/nextprev.astro'
@@ -16,7 +16,7 @@ export interface Props {
   next?: CollectionEntry<'blog'>
 }
 
-const { post, url } = Astro.props
+// const { post, url } = Astro.props
 const { frontmatter, prev, next } = Astro.props
 ---
 
